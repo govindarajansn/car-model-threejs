@@ -1,0 +1,22 @@
+.bottom-sheet-container {
+  background-color: white;
+  max-height: 40vh;
+  z-index: 10;
+  padding: 16px;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+  border-top-left-radius: 16px;
+  transform: translateY(400px);
+  bottom: 0px;
+  position: fixed;
+  border-top-right-radius: 16px;
+  transition: transform 400ms ease-in-out;
+  width: 100%;
+}
+
+.bottom-sheet-container.open {
+  transform: translateY(0px);
+}
+
+.bottom-sheet-container.close {
+  transform: translateY(400px);
+}

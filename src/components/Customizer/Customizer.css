@@ -1,0 +1,134 @@
+.slider-component {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.color-customizer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 16px 0px;
+}
+
+.color-customizer-tab {
+  margin-top: 16px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.color-generator {
+  padding: 0 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.description-input {
+  outline: none;
+  visibility: visible;
+  min-width: 180px;
+  background: #f5f5f5;
+  padding: 12px;
+  border: none;
+  line-height: 18px;
+  font-size: 14px;
+  border-radius: 32px;
+  margin-right: 16px;
+  opacity: 1;
+  transition: opacity 200ms ease-in-out;
+}
+
+.description-input:hover,
+.description-input:active {
+  opacity: 1;
+}
+.button-container {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+.generate-button,
+.apply-button {
+  min-width: 80px;
+  outline: none;
+  border: 1px solid lightgray;
+  font-size: 14px;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 32px;
+  margin: 0px 4px;
+  transition: opacity 200ms ease-in-out;
+  background-color: white;
+}
+
+.apply-button {
+  min-width: 40px;
+  outline: none;
+  border: 1px solid lightgray;
+  padding: 4px;
+  cursor: pointer;
+  border-radius: 32px;
+  margin: 0px 8px;
+  transition: opacity 200ms ease-in-out;
+  background-color: white;
+}
+
+.generate-button:disabled,
+.apply-button:disabled {
+  opacity: 0.7;
+}
+
+@media (max-width: 360px) {
+  .description-input {
+    min-width: unset !important;
+  }
+  .icons-list {
+    display: none !important;
+  }
+}
+
+.menu-container {
+  align-self: center;
+}
+.menu-button {
+  padding: 10px;
+  cursor: pointer;
+  background-color: white;
+  font-size: 14px;
+  outline: none;
+  border: 1px solid lightgray;
+  border-radius: 32px;
+}
+
+.color-picker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.color-input {
+  -webkit-appearance: none;
+  padding: 0;
+  border: none;
+  outline: none;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  margin: 0px 8px;
+}
+
+.color-input::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+}
+.color-input::-webkit-color-swatch-wrapper {
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+}

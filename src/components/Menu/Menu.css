@@ -1,0 +1,31 @@
+.menu-list {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  min-height: 250px;
+  flex-wrap: wrap;
+  margin: 16px 32px;
+}
+
+.menu-item {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+}
+
+.close-menu-button {
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 32px;
+  position: absolute;
+  right: 16px;
+  top: 0px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.menu-container {
+  position: relative;
+}

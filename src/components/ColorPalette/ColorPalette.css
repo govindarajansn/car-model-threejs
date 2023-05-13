@@ -1,0 +1,27 @@
+.color-tab-title {
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.color-circle {
+  border-radius: 100%;
+  min-width: 30px;
+  min-height: 30px;
+  border: 1px solid rgb(229, 229, 229);
+  margin: 4px 16px;
+  cursor: pointer;
+  transition: 100ms ease-in-out;
+}
+
+.colors-list {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.color-circle.selected {
+  outline-offset: 3px;
+  outline: 1px solid rgb(229, 229, 229);
+}

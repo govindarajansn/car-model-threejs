@@ -1,0 +1,11 @@
+canvas.webgl {
+  display: block;
+  width: 100%;
+  height: 70vh !important;
+  object-fit: cover;
+  background-color: #f6f6f6;
+}
+
+.app {
+  position: relative;
+}
