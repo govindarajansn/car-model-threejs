@@ -27,7 +27,7 @@ export const setupLights = (scene, debug = false) => {
   dirLight.position.set(0.25, 3, -2.25);
   dirLight.shadow.mapSize.set(1024, 1024);
   dirLight.castShadow = true;
-  dirLight.intensity = 4;
+  dirLight.intensity = 8;
   dirLight.shadow.mapSize = new THREE.Vector2(1024, 1024);
 
   // Add directional Light to scene

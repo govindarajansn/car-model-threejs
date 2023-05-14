@@ -7,10 +7,22 @@
 .color-customizer {
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: column;
-  padding: 16px 0px;
+  width: 100%;
 }
+
+.list-component{
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  overflow: auto;
+}
+/* 
+
+.flex-flow-component{
+  height: 100px;
+  display: flex;
+  flex-flow: column-reverse nowrap;
+} */
+
 
 .color-customizer-tab {
   margin-top: 16px;
@@ -41,45 +53,23 @@
   transition: opacity 200ms ease-in-out;
 }
 
-.description-input:hover,
-.description-input:active {
-  opacity: 1;
-}
 .button-container {
   display: flex;
-  flex: 1;
-  justify-content: center;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
 }
-.generate-button,
+
 .apply-button {
-  min-width: 80px;
+  flex:1;
+  height: 50px;
   outline: none;
   border: 1px solid lightgray;
-  font-size: 14px;
-  padding: 10px 16px;
   cursor: pointer;
-  border-radius: 32px;
-  margin: 0px 4px;
   transition: opacity 200ms ease-in-out;
   background-color: white;
 }
 
-.apply-button {
-  min-width: 40px;
-  outline: none;
-  border: 1px solid lightgray;
-  padding: 4px;
-  cursor: pointer;
-  border-radius: 32px;
-  margin: 0px 8px;
-  transition: opacity 200ms ease-in-out;
-  background-color: white;
-}
-
-.generate-button:disabled,
-.apply-button:disabled {
-  opacity: 0.7;
-}
 
 @media (max-width: 360px) {
   .description-input {
@@ -90,23 +80,14 @@
   }
 }
 
-.menu-container {
-  align-self: center;
-}
-.menu-button {
-  padding: 10px;
-  cursor: pointer;
-  background-color: white;
-  font-size: 14px;
-  outline: none;
-  border: 1px solid lightgray;
-  border-radius: 32px;
-}
-
 .color-picker {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.grid-component{
+  position: relative;
 }
 
 .color-input {

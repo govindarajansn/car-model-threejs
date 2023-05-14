@@ -1,0 +1,29 @@
+.card {
+    border: 1px solid rgba(240, 233, 233, 0.89);
+    transition: 0.3s;
+    width: 100%;
+}
+
+.card:hover {
+    box-shadow: 4px 2px 1px 0 rgba(0, 0, 0, 0.2);
+    background-color: rgb(248, 248, 248);
+}
+
+.container {
+    display: flex;
+    font-family: 'Dosis', sans-serif;
+    font-size: 18px;
+    padding: 16px 16px;
+    height: 90px;
+    cursor: pointer;
+}
+
+.pad-5{
+    padding: 10px;
+    font-weight: bold;
+}
+
+.pad-10{
+   position: relative;
+   
+}

@@ -12,7 +12,7 @@ interface ColorPaletteProps {
   indexString: string;
 }
 
-function ColorPalette({ config, changeColor, indexString }: ColorPaletteProps): JSX.Element {
+function ColorPalette({ config, changeColor }: ColorPaletteProps): JSX.Element {
   const { colors, types, title, modelPosition } = config;
   const [selectedColorIndex, setSelectedColor] = useState(0);
 
@@ -20,7 +20,6 @@ function ColorPalette({ config, changeColor, indexString }: ColorPaletteProps): 
     <div className='color-palette'>
       <div className='color-tab-title'>
         {title}
-        {indexString}
       </div>
       <div className='colors-tray'>
         <ul className='colors-list'>

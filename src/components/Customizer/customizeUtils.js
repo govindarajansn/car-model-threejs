@@ -10,9 +10,6 @@ export function getRandomColor(colors) {
 }
 
 export function download(modelRef, rendererRef) {
-  const shadowPlane = modelRef.current.getObjectByName('shadow_plane');
-  shadowPlane.visible = false;
-  shadowPlane.material.visible = false;
 
   setTimeout(() => {
     const imageData = rendererRef.current.domElement.toDataURL();
@@ -30,8 +27,6 @@ export function download(modelRef, rendererRef) {
       link.href = dataURL;
       document.body.appendChild(link);
       link.click();
-      shadowPlane.visible = true;
-      shadowPlane.material.visible = true;
     });
   }, 100);
 }

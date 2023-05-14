@@ -6,44 +6,23 @@ import { setUpRenderer } from '../../utils/cameraUtils/renderer';
 import { setupLights } from '../../utils/cameraUtils/light';
 import { setUpCamera } from '../../utils/cameraUtils/camera';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
-import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader';
 import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment';
 import { excludedMesh } from '../../utils/cameraUtils//model';
 import Customizer from '../Customizer/Customizer';
-import Switcher from '../Switcher/Switcher';
 import './Playground.css';
-import shoeColorConfigs from '../Customizer/ShoeConfig';
+import carColorConfigs from '../Customizer/CarConfig';
+import ColorPaletteComponent from '../Customizer/ColorPaletteComponent';
 
 function getLoader() {
   const loader = new GLTFLoader();
-  // const dracoLoader = new DRACOLoader();
-  // dracoLoader.setDecoderConfig({ type: 'wasm' });
-  // dracoLoader.setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.4.1/');
-  // loader.setDRACOLoader(dracoLoader);
   return loader;
 }
 
-// function removeObjects(modelRef) {
-//   const unnecessaryGroups = [
-//     'lf_pid_grp',
-//     'rt_pid_grp',
-//     'lf_lateral_pid',
-//     'rt_lateral_pid',
-//     'lf_heel_stay_pid',
-//     'rt_heel_stay_pid',
-//   ];
-//   unnecessaryGroups &&
-//     unnecessaryGroups.forEach((group) => {
-//       if (modelRef.getObjectByName(group)) {
-//         modelRef.getObjectByName(group).visible = false;
-//       }
-//     });
-// }
 const debugObject = {};
 
 function Playground() {
-  const [loading, setLoading] = useState(true);
-  const [selectedShoeIndex, setSelectedShoeIndex] = useState(0);
+  const [selectedCarIndex] = useState(0);
+  const [selectedIndex, setSelectedIndex] = useState(0);
   const sceneRef = useRef(null);
   const canvasRef = useRef(null);
   const cameraRef = useRef(null);
@@ -88,40 +67,24 @@ function Playground() {
       }
     });
 
-    // // removeObjects(modelRef.current);
     model.position.x = 1.4;
     model.position.y = 0;
-    // model.position.set(1, 0.5, 0)
+    controlsRef.current.object.position.set(3.2721405209559538, 1.9869284325362329, 1.7718614102150416)
   };
 
-  function selectShoe(index) {
-    console.log(index);
-    setLoading(true);
-    const currentModel = modelRef.current;
-    if (currentModel) {
-      sceneRef.current.remove(currentModel);
-    }
-
-    const selectedShoeConfig = shoeColorConfigs[index];
-    const loader = getLoader();
-
-    loader.load(selectedShoeConfig.modelUrl, (gltf) => {
-      setLoading(false);
-      handleLoad(gltf, sceneRef.current, false);
-    });
-
-    setSelectedShoeIndex(index);
+  function setColorIndex(index) {
+    setSelectedIndex(index);
   }
+
 
   useEffect(() => {
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color(0xffeeff);
+    scene.background = new THREE.Color('rgb(f,f,f,0.1)');
     sceneRef.current = scene;
 
     const loader = getLoader();
 
-    loader.load(shoeColorConfigs[selectedShoeIndex].modelUrl, (gltf) => {
-      setLoading(false);
+    loader.load(carColorConfigs[selectedCarIndex].modelUrl, (gltf) => {
       handleLoad(gltf, scene);
     });
 
@@ -144,10 +107,6 @@ function Playground() {
 
     environmentMap.encoding = THREE.sRGBEncoding;
 
-    // scene.background = new THREE.Color(0xf6f6f6);
-    const textureLoader = new THREE.TextureLoader();
-    const texture = textureLoader.load('/images/dark.jpeg');
-    scene.background = texture;
 
     scene.environment = environmentMap;
 
@@ -166,17 +125,17 @@ function Playground() {
     cameraRef.current.updateProjectionMatrix();
 
     // Update renderer
-    renderer.current.setSize(window.innerWidth, window.innerHeight - 200);
+    renderer.current.setSize(window.innerWidth, window.innerHeight);
     renderer.current.setPixelRatio(2);
   }
 
   return (
     <div className='app'>
       <div className='header'>
-        <div className='title'>{shoeColorConfigs[selectedShoeIndex].name}</div>
+        <div className='title'>{carColorConfigs[selectedCarIndex].name}</div>
         <div className='icons-list'>
           <a
-            href={'https://www.linkedin.com/in/nageshwara-sairam/'}
+            href={'https://www.linkedin.com/in/sneha-govindarajan/'}
             target='_blank'
             rel='noreferrer'
           >
@@ -190,18 +149,30 @@ function Playground() {
           </a>
         </div>
       </div>
-      <canvas ref={canvasRef} className='webgl'></canvas>
-      <Switcher selectedShoeIndex={selectedShoeIndex} selectShoe={selectShoe} />
-      {loading && <div className='loader'></div>}
-      <Customizer
-        selectedShoeIndex={selectedShoeIndex}
-        modelRef={modelRef}
-        cameraRef={cameraRef}
-        controlsRef={controlsRef}
-        canvasRef={canvasRef}
-        rendererRef={rendererRef}
-        actionRef={actionRef}
-      ></Customizer>
+      <div className="flex-container">
+        <div className='car-region'>
+          <canvas ref={canvasRef} className='webgl'></canvas>
+          <div className="color-palate">
+            <ColorPaletteComponent
+              selectedIndex={selectedIndex}
+              selectedCarIndex={selectedCarIndex}
+              modelRef={modelRef}
+            />
+          </div>
+        </div>
+        <div className='side-container'>
+          <Customizer
+            selectedCarIndex={selectedCarIndex}
+            modelRef={modelRef}
+            cameraRef={cameraRef}
+            controlsRef={controlsRef}
+            canvasRef={canvasRef}
+            rendererRef={rendererRef}
+            actionRef={actionRef}
+            setColorIndex={setColorIndex}
+          ></Customizer>
+        </div>
+      </div>
     </div>
   );
 }

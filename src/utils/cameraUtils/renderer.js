@@ -11,12 +11,12 @@ export function setUpRenderer(canvasRef) {
     preserveDrawingBuffer: true,
   });
 
-  renderer.setSize(window.innerWidth, window.innerHeight - 250);
+  renderer.setSize(window.innerWidth - 100, window.innerHeight);
   renderer.shadowMap.enabled = true;
   renderer.physicallyCorrectLights = true;
   // renderer.outputEncoding = THREE.sRGBEncoding;
   renderer.toneMapping = THREE.ReinhardToneMapping;
-  renderer.toneMappingExposure = 4.5;
+  renderer.toneMappingExposure = 5;
   renderer.setClearColor(0x000000);
   renderer.setPixelRatio(window.devicePixelRatio);
 

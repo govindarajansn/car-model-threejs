@@ -1,15 +1,18 @@
 .color-tab-title {
+  font-family: 'Dosis', sans-serif;
   margin-bottom: 32px;
   display: flex;
   justify-content: center;
+  padding-top: 10px;
+  font-size: 20px;
   align-items: center;
 }
 
 .color-circle {
   border-radius: 100%;
-  min-width: 30px;
-  min-height: 30px;
-  border: 1px solid rgb(229, 229, 229);
+  min-width: 40px;
+  min-height: 40px;
+  border: 1px solid rgb(23 9 9);
   margin: 4px 16px;
   cursor: pointer;
   transition: 100ms ease-in-out;
@@ -22,6 +25,6 @@
   align-items: center;
 }
 .color-circle.selected {
-  outline-offset: 3px;
-  outline: 1px solid rgb(229, 229, 229);
+      outline-offset: 3px;
+      outline: 1px solid rgb(170 140 140);
 }
