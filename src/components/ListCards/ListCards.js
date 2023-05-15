@@ -12,7 +12,6 @@ function ListCards(props) {
                     return (
                         <>
                             <li><div className='list-parts' onClick={() => {
-                                console.log('list', index)
                                 selectType(index);
                             }}>
                                 <CardComponent

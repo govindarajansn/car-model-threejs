@@ -7,7 +7,6 @@ import { setupLights } from '../../utils/cameraUtils/light';
 import { setUpCamera } from '../../utils/cameraUtils/camera';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment';
-import { excludedMesh } from '../../utils/cameraUtils//model';
 import Customizer from '../Customizer/Customizer';
 import './Playground.css';
 import carColorConfigs from '../Customizer/CarConfig';
@@ -37,10 +36,9 @@ function Playground() {
     mixerRef.current && mixerRef.current.update(0.01);
     rendererRef.current.render(sceneRef.current, cameraRef.current);
     requestAnimationFrame(animate);
-  }, [mixerRef.current]);
+  }, []);
 
   const handleLoad = (gltf, scene) => {
-    console.log(gltf)
     const model = gltf.scene;
     modelRef.current = model;
 
@@ -55,17 +53,11 @@ function Playground() {
 
     gui.add(model.rotation, 'y', -Math.PI, Math.PI, 0.001).name('rotation');
 
-    scene.traverse((child) => {
-      if (child instanceof THREE.Mesh && child.material instanceof THREE.MeshStandardMaterial) {
-        child.material.envMapIntensity = debugObject.envMapIntensity;
-        child.castShadow = true;
-        child.receiveShadow = true;
-        if (excludedMesh[child.name]) {
-          child.material.color.set(0xffffff);
-          return;
-        }
-      }
-    });
+    // scene.traverse((child) => {
+    //   if (child instanceof THREE.Mesh && child.material instanceof THREE.MeshStandardMaterial) {
+    //     child.Mesh.material.roughness = 1;
+    //   }
+    // });
 
     model.position.x = 1.4;
     model.position.y = 0;

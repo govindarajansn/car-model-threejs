@@ -2,7 +2,6 @@ import React from 'react';
 import './CardComponent.css';
 
 function CardComponent({ title, pic }) {
-    // console.log(item);
     return (
         <>
             <div className="card">

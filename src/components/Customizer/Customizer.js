@@ -9,7 +9,6 @@ const Customizer = (props) => {
   const { modelRef, controlsRef, rendererRef, selectedCarIndex, actionRef, setColorIndex } = props;
 
 
-
   const rotateModel = useCallback(() => {
     gsap.to(modelRef.current.rotation, {
       y: Math.PI * 2,
@@ -34,7 +33,6 @@ const Customizer = (props) => {
 
   const onChange = useCallback(
     (index) => {
-      console.log('index', index)
       setColorIndex(index);
       const position = colorConfig[selectedCarIndex].colorConfigs[index].modelPosition;
       gsap.to(controlsRef.current.object.position, {
