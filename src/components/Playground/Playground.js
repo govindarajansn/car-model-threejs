@@ -21,6 +21,7 @@ const debugObject = {};
 
 function Playground() {
   const [selectedCarIndex] = useState(0);
+  // const [loading, setLoading] = useState(true);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const sceneRef = useRef(null);
   const canvasRef = useRef(null);
@@ -152,6 +153,7 @@ function Playground() {
             />
           </div>
         </div>
+        {/* {loading && <div className='loader'></div>} */}
         <div className='side-container'>
           <Customizer
             selectedCarIndex={selectedCarIndex}

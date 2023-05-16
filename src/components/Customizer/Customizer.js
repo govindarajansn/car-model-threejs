@@ -15,6 +15,7 @@ const Customizer = (props) => {
       duration: 0.8,
       ease: 'power1.inOut',
       onComplete: () => {
+        controlsRef.current.object.position.set(3.2721405209559538, 1.9869284325362329, 1.7718614102150416)
         actionRef.current.play();
       },
     });
@@ -26,6 +27,7 @@ const Customizer = (props) => {
       duration: 0.8,
       ease: 'power1.inOut',
       onComplete: () => {
+        controlsRef.current.object.position.set(3.2721405209559538, 1.9869284325362329, 1.7718614102150416)
         actionRef.current.stop();
       },
     });

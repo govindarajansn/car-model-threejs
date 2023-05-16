@@ -1,4 +1,4 @@
-import colorscustomiser from './ShoeConfig';
+import colorscustomiser from './CarConfig';
 
 export function generateConfig(colors, index) {
   const generatedConfig = colorscustomiser[index].colorConfigs.map((config) => {

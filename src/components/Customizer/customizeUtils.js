@@ -23,7 +23,6 @@ export function download(modelRef, rendererRef) {
       ctx.drawImage(image, 0, 0);
       const dataURL = canvas.toDataURL('image/png');
       const link = document.createElement('a');
-      link.download = 'nike-customizable.png';
       link.href = dataURL;
       document.body.appendChild(link);
       link.click();
