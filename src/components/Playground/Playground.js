@@ -90,12 +90,12 @@ function Playground() {
     scene.environment = pmremGenerator.fromScene(new RoomEnvironment(), 1).texture;
 
     const environmentMap = new THREE.CubeTextureLoader().load([
-      '/texture/environmentMaps/px.png',
-      '/texture/environmentMaps/nx.png',
-      '/texture/environmentMaps/py.png',
-      '/texture/environmentMaps/ny.png',
-      '/texture/environmentMaps/pz.png',
-      '/texture/environmentMaps/nz.png',
+      '/texture/environmentMaps/px.jpg',
+      '/texture/environmentMaps/nx.jpg',
+      '/texture/environmentMaps/py.jpg',
+      '/texture/environmentMaps/ny.jpg',
+      '/texture/environmentMaps/pz.jpg',
+      '/texture/environmentMaps/nz.jpg',
     ]);
 
     environmentMap.encoding = THREE.sRGBEncoding;
