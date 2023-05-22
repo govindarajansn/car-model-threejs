@@ -19,7 +19,7 @@ const carColorConfigs = [
         ],
         types: ['outer-body', 'outer-body-parts', 'left-door-paint', 'right-door-paint'],
         title: 'Paint',
-        image: '/images/car-pic/paint.png',
+        image: '/images/car-pic/paint.jpg',
         show: true,
         modelPosition: {
           x: 3.5278410968518297,
@@ -60,7 +60,7 @@ const carColorConfigs = [
         ],
         types: ['back-bumbper'],
         title: 'outer-line',
-        image: '/images/car-pic/outer-line.png',
+        image: '/images/car-pic/outer-line.jpg',
         show: true,
         modelPosition: {
           x: 2.792094620445568, y: 2.69567217362244, z: 1.3310710734699898
@@ -70,7 +70,7 @@ const carColorConfigs = [
         colors: ['#FF0000', '#000000', '#FFE900', '#9A9B9D', '#22005D', '#070675'],
         types: ['seat-belt', 'gear-rest', 'gauge-color', 'Seat-holder', 'red-1', 'red-2', 'red-4', 'red-5'],
         title: 'Seat-belt + gauge',
-        image: '/images/car-pic/seat-belt.png',
+        image: '/images/car-pic/seat-belt.jpg',
         show: false,
         modelPosition: {
           x: 1.948441045552817,
@@ -82,7 +82,7 @@ const carColorConfigs = [
         colors: ['#1E140A', '#00008B', '#000', '#22005D'],
         types: ['side-black-door'],
         title: 'Side Stripes',
-        image: '/images/car-pic/stripe.png',
+        image: '/images/car-pic/stripe.jpg',
         show: true,
         modelPosition: {
           x: 4.264783568063599, y: 1.1205317219655524, z: 0.5793072706007855
@@ -101,7 +101,7 @@ const carColorConfigs = [
         colors: ['#000', '#22005D', '#070675', '#2b1d10'],
         types: ['Secondary-base'],
         title: 'Secondary-base',
-        image: '/images/car-pic/sec-base.png',
+        image: '/images/car-pic/sec-base.jpg',
         show: false,
         modelPosition: {
           x: 1.0297888674402929, y: 2.7122584585064744, z: -2.2119599177283398
@@ -111,7 +111,7 @@ const carColorConfigs = [
         colors: ['#000', '#22005D', '#070675', '#3b2815'],
         types: ['Steering-wheel', 'Steering-handle'],
         title: 'Steering wheel',
-        image: '/images/car-pic/Steering.png',
+        image: '/images/car-pic/Steering.jpg',
         show: false,
         modelPosition: {
           x: 3.002587821439075, y: 1.749056032366268, z: -1.389404553421024
@@ -121,7 +121,7 @@ const carColorConfigs = [
         colors: ['#000', '#2b1d10'],
         types: ['Front-seats', 'right-inner-door', 'left-door-inside'],
         title: 'Seat color',
-        image: '/images/car-pic/seat.png',
+        image: '/images/car-pic/seat.jpg',
         show: false,
         modelPosition: {
           x: -0.4354405601616895,
@@ -133,7 +133,7 @@ const carColorConfigs = [
         colors: ['#A1765B', '#7FCDCD', '#00008B', '#2D728F', '#6B5B95', '#F5F5DC', '#000'],
         types: ['chrome'],
         title: 'symbol-color',
-        image: '/images/car-pic/symbol.png',
+        image: '/images/car-pic/symbol.jpg',
         show: false,
         modelPosition: {
           x: 1.2804794647833, y: 1.649099151785669, z: 3.0743785156377066
@@ -152,7 +152,7 @@ const carColorConfigs = [
           'rim-1', 'rim-2', 'rim-3'
         ],
         title: 'Rim',
-        image: '/images/car-pic/rim.png',
+        image: '/images/car-pic/rim.jpg',
         show: true,
         modelPosition: {
           x: 4.254315223613636, y: 1.043988829818961, z: 0.7546653222255745,
@@ -171,7 +171,7 @@ const carColorConfigs = [
           'outer-rim-1', 'outer-rim-2', 'outer-rim-3'
         ],
         title: 'Outer Rim',
-        image: '/images/car-pic/outer-rim.png',
+        image: '/images/car-pic/outer-rim.jpg',
         show: true,
         modelPosition: {
           x: 4.254315223613636, y: 1.043988829818961, z: 0.7546653222255745,
@@ -181,7 +181,7 @@ const carColorConfigs = [
         colors: ['#3b2815', '#7FCDCD', '#00008B', '#000', '#6B5B95'],
         types: ['light-stripe'],
         title: 'Gear box + display',
-        image: '/images/car-pic/gear.png',
+        image: '/images/car-pic/gear.jpg',
         show: false,
         modelPosition: {
           x: 1.0024611270806856, y: 3.0984092213909897, z: -1.6278372890595647
@@ -191,7 +191,7 @@ const carColorConfigs = [
         colors: ['#3E92CC', '#000', '#3b2815', '#2D728F', '#6B5B95'],
         types: ['Object_96'],
         title: 'floor mat',
-        image: '/images/car-pic/mat.png',
+        image: '/images/car-pic/mat.jpg',
         show: false,
         modelPosition: {
           x: 2.1602019395083447, y: 3.1288215462611144, z: -1.0556548636810237
