@@ -9,7 +9,7 @@ const carColorConfigs = [
         colors: [
           '#22005D',
           '#F9F1DF',
-          '#1E140A',
+          '#3b2815',
           '#FF0000',
           '#008FD2',
           '#FFC000',
@@ -98,7 +98,7 @@ const carColorConfigs = [
       //   },
       // },
       {
-        colors: ['#000', '#22005D', '#070675', '#140D07'],
+        colors: ['#000', '#22005D', '#070675', '#2b1d10'],
         types: ['Secondary-base'],
         title: 'Secondary-base',
         image: '/images/car-pic/sec-base.png',
@@ -108,7 +108,7 @@ const carColorConfigs = [
         },
       },
       {
-        colors: ['#000', '#22005D', '#070675', '#140D07'],
+        colors: ['#000', '#22005D', '#070675', '#3b2815'],
         types: ['Steering-wheel', 'Steering-handle'],
         title: 'Steering wheel',
         image: '/images/car-pic/Steering.png',
@@ -118,7 +118,7 @@ const carColorConfigs = [
         },
       },
       {
-        colors: ['#000', '#140D07'],
+        colors: ['#000', '#2b1d10'],
         types: ['Front-seats', 'right-inner-door', 'left-door-inside'],
         title: 'Seat color',
         image: '/images/car-pic/seat.png',
@@ -142,7 +142,7 @@ const carColorConfigs = [
       {
         colors: [
           '#A569BD',
-          '#140D07',
+          '#3b2815',
           '#00008B',
           '#000',
           '#F39C12',
@@ -161,7 +161,7 @@ const carColorConfigs = [
       {
         colors: [
           '#A569BD',
-          '#140D07',
+          '#3b2815',
           '#00008B',
           '#000',
           '#F39C12',
@@ -178,7 +178,7 @@ const carColorConfigs = [
         },
       },
       {
-        colors: ['#140D07', '#7FCDCD', '#00008B', '#000', '#6B5B95'],
+        colors: ['#3b2815', '#7FCDCD', '#00008B', '#000', '#6B5B95'],
         types: ['light-stripe'],
         title: 'Gear box + display',
         image: '/images/car-pic/gear.png',
@@ -188,7 +188,7 @@ const carColorConfigs = [
         },
       },
       {
-        colors: ['#3E92CC', '#000', '#140D07', '#2D728F', '#6B5B95'],
+        colors: ['#3E92CC', '#000', '#3b2815', '#2D728F', '#6B5B95'],
         types: ['Object_96'],
         title: 'floor mat',
         image: '/images/car-pic/mat.png',
